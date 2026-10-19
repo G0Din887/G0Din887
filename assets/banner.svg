@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="0" x2="1220" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0F14"/>
+      <stop offset="0.55" stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#161B22"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="0.65" stop-color="#FFFFFF" stop-opacity="0.035"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="textGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1280" height="320" fill="url(#bg)"/>
+
+  <!-- Едва заметная сетка -->
+  <g opacity="0.04" stroke="#FFFFFF">
+    <path d="M0 80 H1280 M0 160 H1280 M0 240 H1280"/>
+    <path d="M160 0 V320 M320 0 V320 M480 0 V320 M640 0 V320 M800 0 V320 M960 0 V320 M1120 0 V320"/>
+  </g>
+
+  <!-- Неоновая рамка баннера -->
+  <rect x="14.5" y="14.5" width="1251" height="291" rx="24" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="4" filter="url(#glow)"/>
+  <rect x="14.5" y="14.5" width="1251" height="291" rx="24" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Круг и неоновые кольца -->
+  <circle cx="1085" cy="160" r="148" fill="#0E131A"/>
+  <circle cx="1085" cy="160" r="148" fill="url(#halo)"/>
+  <circle cx="1085" cy="160" r="148" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="2.5" filter="url(#glow)"/>
+  <circle cx="1085" cy="160" r="148" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="1085" cy="160" r="160" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 9">
+    <animateTransform attributeName="transform" type="rotate" from="0 1085 160" to="360 1085 160" dur="40s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Аватар (вписан в круг) -->
+  <g transform="translate(989.3,59.9) scale(0.58)" filter="url(#glow)">
+    <rect x="1" y="10" width="48" height="90" fill="#F0F6FC"/>
+    <rect x="281" y="10" width="48" height="90" fill="#F0F6FC"/>
+    <rect x="157" y="0" width="58" height="225" fill="#F0F6FC"/>
+    <rect x="121" y="175" width="94" height="50" fill="#F0F6FC"/>
+    <rect x="44.5" y="260" width="41" height="45" fill="#F0F6FC"/>
+    <rect x="244.5" y="260" width="41" height="45" fill="#F0F6FC"/>
+    <rect x="84" y="300" width="163" height="45" fill="#F0F6FC"/>
+  </g>
+
+  <!-- Текст -->
+  <text x="80" y="112" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="20" font-weight="600" letter-spacing="6" fill="#8B949E">STUDENT · DEVELOPER</text>
+  <text x="78" y="196" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="84" font-weight="700" fill="#F0F6FC" filter="url(#textGlow)">G0Din887</text>
+  <rect x="82" y="214" width="66" height="6" rx="3" fill="#FFFFFF" filter="url(#glow)"/>
+  <text x="80" y="256" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="25" fill="#C9D1D9">Java · C# · HTML · CSS</text>
+</svg>
